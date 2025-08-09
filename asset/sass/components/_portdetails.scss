@@ -1,0 +1,85 @@
+.portDetails {
+  margin-top: 16rem;
+  margin-bottom: 10.5rem;
+
+  &__container {
+    max-width: 882px;
+    width: 100%;
+    margin: auto;
+  }
+
+  &__video-lg {
+    width: 100%;
+    aspect-ratio: 16 / 12; // ya 4 / 3, ya 3 / 2, jo bhi shape chahiye
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  &__table {
+    border-radius: 15px;
+    // overflow: hidden;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+
+    @include respond(md) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    video {
+      box-shadow: 0 0.5rem 3rem rgba($color-black, 0.93);
+    }
+  }
+
+  &__col {
+    &-lg {
+      grid-column: 1 / -1;
+      padding: 8.7rem;
+      background-color: $color-white;
+      border-radius: 15px;
+      overflow: hidden;
+
+
+      @include respond (md) {
+        padding: 0;
+      }
+    }
+
+    &-sm {
+      padding: 4rem;
+      background-color: $color-white;
+      border-radius: 15px;
+      overflow: hidden;
+      
+      @include respond (md) {
+        padding: 0;
+      }
+    }
+  }
+  &--secondary {
+    // font-size: 4.5rem;
+      font-size: clamp(2rem, 3vw + 1rem, 4.5rem);
+
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  &__grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include respond(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+ 
+}

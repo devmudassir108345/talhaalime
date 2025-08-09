@@ -1,0 +1,19 @@
+.section--reveal{
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // text-transform: capitalize;
+    font-size: 6rem;
+    font-family: $font-secondary-regular;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    @include respond(md) {
+    font-size: 4rem;
+  }
+
+   
+}

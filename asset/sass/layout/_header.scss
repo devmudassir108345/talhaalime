@@ -1,0 +1,141 @@
+.header {
+  max-width: 1167px;
+  margin: 0 auto;
+  width: 90%;
+  background-color: $color-white;
+  border-radius: 10px;
+  position: fixed;
+  top: 1%;
+  left: 49.6%;
+  transform: translateX(-50%);
+  box-shadow: 0 12px 26px #00000008, 0 47px 47px #00000008,
+    0 107px 64px #00000005, 0 189px 76px #0000, 0 296px 83px #0000;
+  z-index: 1000;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $space-1-6;
+    position: relative;
+  }
+
+  &__logo {
+    max-width: 112px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: $color-primary;
+    }
+  }
+
+  &__links {
+    ul {
+      display: flex;
+      align-items: center;
+      // gap: $space-3-2;
+
+      font-size: $font-size-1-5;
+
+      a {
+        font-size: $font-size-1-5;
+        color: $color-dark-1;
+        text-transform: capitalize;
+        letter-spacing: 0.3px;
+        font-weight: 500;
+        font-family: $font-primary-medium;
+        padding: 0 2rem;
+        height: 6rem;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  &__menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    cursor: pointer;
+    span {
+      transition: all .3s;
+      height: 0.2rem;
+      width: 4rem;
+      background-color: $color-black;
+      display: block;
+    }
+  }
+
+  &__close {
+    gap: 0.3rem;
+    
+    span {
+      transition: all .3s;
+      &:nth-child(1) {
+        transform: rotate(45deg) translateY(0.2rem);
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg) translateY(-0.2rem);
+      }
+    }
+  }
+
+  @include respond(lg) {
+    .header {
+      &__container {
+        padding: 1rem $space-1-6;
+      }
+      &__menu-btn {
+        display: flex;
+      }
+
+      &__links {
+        position: absolute;
+        top: 85%;
+        left: 0;
+        width: 100%;
+        padding: 2.8rem 0;
+        background-color: $color-gray-light;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        overflow: hidden;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: height 0.4s ease, opacity 0.4s ease;
+
+        &.active {
+          opacity: 1;
+          visibility: visible;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+
+          li {
+            width: 100%;
+            padding: 0.75rem;
+          }
+        }
+        a {
+          height: unset;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

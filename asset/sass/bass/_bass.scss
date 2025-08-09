@@ -1,0 +1,163 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; // ✅ ADD THIS LINE
+  overflow-x: hidden;
+
+  
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* 2. Now apply box-sizing to all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+body {
+  box-sizing: inherit;
+  font-family: $font-primary-medium;
+  color: $color-dark-1;
+  background-color: $color-gray-light;
+  position: relative;
+}
+
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+// Global selection style
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "Inter-reugular";
+  src: url("/asset/font/Inter/static/Inter_18pt-Regular.ttf") format("truetype");
+
+  font-weight: 400; // Regular
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/asset/font/Inter/static/Inter_24pt-Medium.ttf") format("truetype");
+
+  font-weight: 400; // Regular
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter-bold";
+  src: url("/asset/font/Inter/static/Inter_18pt-Bold.ttf") format("truetype");
+  font-weight: 400; // Regular
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter-tight-regular";
+  src: url("/asset/font/Inter_Tight/static/InterTight-Regular.ttf")
+    format("truetype");
+  font-weight: 400; // Regular
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter-tight-bold";
+  src: url("/asset/font/Inter_Tight/static/InterTight-Bold.ttf")
+    format("truetype");
+  font-weight: 400; // Regular
+  font-style: normal;
+}
+
+.custom-tooltip {
+  position: fixed;
+  background-color: $color-primary;
+  color: white;
+  padding: 1px 1.8rem;
+  border-radius: 6px;
+  // white-space: nowrap;
+  pointer-events: none;
+  transform: translate(10%, 130%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 1000;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-transform: capitalize;
+}
+
+section + section {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.vertical-lines {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1;
+
+  @include respond(xl) {
+    display: none;
+  }
+}
+
+.vertical-lines::before,
+.vertical-lines::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #ccc;
+  transition: all 1s ease;
+}
+
+.vertical-lines::before {
+  left: var(--left-line, 0px);
+}
+
+.vertical-lines::after {
+  right: var(--right-line, 0px);
+}
+
+.overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+
+  &__hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+}

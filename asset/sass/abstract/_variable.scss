@@ -1,0 +1,108 @@
+// ===========================================
+// *🎨 Color Palette
+// ===========================================
+
+// ---------- Background Colors ----------
+// Brand Colors
+$color-primary: #ff4d00;
+$color-secondary: #c33b00;
+
+// Background / Grey Scale
+$color-white: #ffffff;
+$color-light: #fcfcfc;
+$color-lighter: #f7f7f7;
+$color-gray: #e0e0e0;
+$color-gray-light: #f6f6f6;
+$color-gray-dark: #8f8f8f;
+$color-gray-dark-2: #666f6f;
+$color-text: #525252;
+$color-black: #000000;
+$color-dark-1: #1a1a1a;
+$color-dark-2: #131313;
+$color-dark-3: #101828;
+$color-overlay: rgba(0, 0, 0, 0.25);
+
+// ---------- Fill Colors ----------
+
+// ---------- Border Colors ----------
+
+$color-light-1: #e9eab6;
+$border-light-2: #e5e5e5;
+$border-gray: #e0e0e0;
+$border-orange: #ff4d00;
+$border-orange-alt: #ff4c24;
+$border-dark-1: #333741;
+$border-dark-2: #282828;
+$border-dark-3: #1a1a1a26;
+$border-dark-4: #1a1a1a;
+
+// ===========================================
+// * FONT INFO AND FONT SIZES
+// ===========================================
+
+// Font Families
+$font-sans-serif: sans-serif;
+$font-primary-regular: "Inter-regular", Arial, sans-serif;
+$font-primary-medium: "Inter-medium", Arial, sans-serif;
+$font-primary-bold: "Inter-bold", Arial, sans-serif;
+$font-secondary-regular: "Inter-tight-regular", Arial, sans-serif;
+$font-secondary-bold: "Inter-tight-bold", Arial, sans-serif;
+
+// Font Sizes
+
+$font-size-1-1: 1.1rem; // 11px
+$font-size-1-4: 1.4rem; // 14px
+$font-size-1-5: 1.5rem; // 15px
+$font-size-1-6: 1.6rem; // 16px
+$font-size-1-8: 1.8rem; // 18px
+$font-size-2: 2rem; // 20px
+$font-size-2-4: 2.4rem; // 24px
+$font-size-3-2: 3.2rem; // 32px
+$font-size-4-8: 4.8rem; // 48px
+$font-size-6-75: 6.75rem; // 67.5px
+$font-size-7-5: 7.5rem; // 75px
+$font-size-8-0: 8rem; // 80px
+
+// Font Weights
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-600: 600;
+$font-weight-700: 700;
+
+// Line Heights
+$line-height-normal: normal;
+$line-height-11: 11px;
+$line-height-15: 15px;
+$line-height-16_5: 16.5px;
+$line-height-19_5: 19.5px;
+$line-height-20: 20px;
+$line-height-21: 21px;
+$line-height-22_5: 22.5px;
+$line-height-26: 26px;
+$line-height-27: 27px;
+$line-height-35_2: 35.2px;
+$line-height-52_8: 52.8px;
+$line-height-67_5: 67.5px;
+$line-height-75: 75px;
+$line-height-80: 80px;
+
+// ===========================================
+// * SPACING VARIABLES
+// ===========================================
+
+// Base grid
+$spacing-unit: 0.8rem; // 8px
+
+// Multiple scale
+$space-0-4: 0.4rem; // 4px
+$space-0-8: 0.8rem; // 8px
+$space-1-2: 1.2rem; // 16px
+$space-1-4: 1.4rem; // 16px
+$space-1-6: 1.6rem; // 16px
+$space-1-8: 1.8rem; // 16px
+$space-2:     2rem; // 16px
+$space-2-4: 2.4rem; // 24px (optional)
+$space-2-8: 2.8rem; // 24px (optional)
+$space-3-2: 3.2rem; // 32px
+$space-4-8: 4.8rem; // 48px
+$space-6-4: 6.4rem; // 64px

@@ -1,0 +1,53 @@
+/////////////////////////////////////////////
+
+////////////////IMPORT SASS FILES///////////
+
+///////////////////////////////////////////
+// abstract (global utilities)
+
+// base (reset and typography)
+@import "abstract/variable";
+@import "abstract/mixins";
+
+
+
+@import "bass/bass";
+@import "bass/typography.scss";
+
+
+
+@import "abstract/animation";
+
+
+
+// layout (header, footer, breakpoints)
+@import "layout/breakpoint";
+@import "layout/header";
+@import "layout/footer";
+
+// components (hero, about, services, etc.)
+
+@import "components/hero";
+@import "components/banner";
+
+@import "components/services";
+
+@import "components/contact";
+
+@import "components/profile";
+@import "components/projects";
+@import "components/clinets";
+@import "components/testimonail";
+@import "components/accordion";
+
+@import "components//logos";
+@import "components//stories";
+@import "components/explore";
+@import "components/reveal";
+@import "components/workSlides";
+@import "components/word-process";
+@import "components/industry";
+@import "components/faql";
+@import "components/portfolio";
+@import "components/portHero";
+@import "components/portdetails";

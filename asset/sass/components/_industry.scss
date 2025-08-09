@@ -1,0 +1,75 @@
+.industry {
+  padding: 9rem 0;
+
+  .container-sm {
+    overflow: unset !important;
+  }
+  &__headings {
+    font-size: 5rem;
+    font-weight: 700;
+
+    span {
+      color: $color-primary;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    // align-items: center;
+    gap: 3rem;
+
+    position: relative;
+
+    @include respond(lg) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__left {
+    position: sticky;
+    top: 80px;
+    height: auto;
+    align-self: start;
+
+    @include respond(lg) {
+      position: unset;
+    }
+
+    // height: 100px;
+  }
+  &__right {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1.7rem;
+
+      li {
+        // cursor: pointer;
+        a {
+          font-size: 2.2rem;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 100%;
+          padding: 2.4rem;
+
+          width: 100%;
+
+          background-color: $color-white;
+          border-radius: 15px;
+          border: 1px solid $border-light-2;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: $color-gray;
+
+            // border-color: $border-gray;
+            transform: scale(0.98);
+          }
+        }
+      }
+    }
+  }
+}

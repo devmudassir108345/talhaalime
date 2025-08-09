@@ -1,0 +1,66 @@
+.footer {
+  padding: 3rem 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 6.5rem;
+
+    @include respond(lg) {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+  }
+
+  &__logo {
+    max-width: 128px;
+    margin-bottom: 3.4rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 2rem;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    a {
+      color: $color-black;
+    }
+  }
+
+  &__heading {
+    font-weight: 900;
+    margin-bottom: 2.8rem;
+  }
+
+  &__list {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+
+      li{
+      padding: .6rem 0;
+
+      }
+      a {
+        transition: color 0.3s ease;
+        
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    p {
+      max-width: 203px;
+    }
+  }
+}

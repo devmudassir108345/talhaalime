@@ -1,0 +1,62 @@
+.logos {
+  margin-bottom: 11rem;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    // max-width: 1130px;
+    width: 100%;
+    margin: 3rem auto;
+
+    @include respond(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__img {
+    padding: 1.6rem 2.5rem;
+    max-width: 170px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    letter-spacing: 0.5px;
+  }
+
+  &__box {
+    // padding: 1.6rem 2.5rem;
+    border: 1px solid $color-gray;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  a {
+    font-size: $font-size-1-5;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    color: $color-secondary;
+    border: 2px dashed $color-secondary;
+    border-radius: 10px;
+    /* height: 18%; */
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-white;
+    }
+  }
+}

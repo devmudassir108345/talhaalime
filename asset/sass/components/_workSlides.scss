@@ -1,0 +1,141 @@
+.workSlides {
+  padding: 9.8rem 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 36% 60%;
+    gap: 3rem;
+
+    @include respond(lg) {
+      grid-template-columns: 100%;
+      gap: 2rem;
+    }
+
+    .heading--secondary {
+      line-height: 1.3;
+      //   text-align: center;
+
+      @include respond(lg, max) {
+        text-align: center;
+      }
+    }
+
+    .splide {
+      .splide__slide {
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        height: 502px;
+        background: #fff;
+
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        @include respond(lg, min) {
+          opacity: 0.3;
+        }
+        @include respond(md, max) {
+          opacity: 0.3;
+        }
+        @include respond(sm, max) {
+          opacity: 1;
+          height: unset;
+        }
+      }
+
+      .splide__slide.is-active {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__text {
+    @include respond(lg, max) {
+      text-align: center;
+    }
+
+    @include respond(lg, min) {
+      max-width: 310px;
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    @include respond(lg, max) {
+      text-align: center;
+    }
+  }
+  &__img {
+    max-width: 100%;
+    height: 70%;
+    border-radius: 15px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+  }
+
+  &__content {
+    margin: 2rem 2.5rem;
+
+    p {
+      color: $color-text;
+
+      span {
+        color: $color-dark-1;
+      }
+    }
+  }
+
+  &__kewrd {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+
+    ul {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    li {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid $border-light-2;
+      border-radius: 50px;
+
+      background-color: $color-lighter;
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    i {
+      height: 6.4rem;
+      width: 6.4rem;
+      border-radius: 50%;
+      border: 0.5rem solid $color-white;
+      background-color: $color-black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-white;
+      font-size: 2rem;
+      box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $color-primary;
+        
+      }
+
+      &:active {
+        transform: scale(0.8);
+      }
+    }
+  }
+}

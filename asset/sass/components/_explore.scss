@@ -1,0 +1,29 @@
+.explore {
+  background-image: url(/asset/images/webflow.avif);
+  padding: 2.5rem;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 4rem;
+
+  &__content {
+    padding: 4rem;
+    width: 100%;
+  }
+
+  .text__sm {
+    max-width: 433px;
+    line-height: 27.5px;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 1.6rem;
+
+    @include respond(md) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+}

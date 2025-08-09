@@ -1,0 +1,13 @@
+.faq{
+    padding: 9rem 0;
+
+    &__container{
+        display: grid;
+        grid-template-columns: 36% 1fr;
+        gap: 8rem;
+
+        @include respond(lg) {
+            grid-template-columns: 100%;
+        }
+    }
+}

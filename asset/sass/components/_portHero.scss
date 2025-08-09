@@ -1,0 +1,113 @@
+.portHero {
+  padding-top: 18rem;
+  padding-bottom: 5rem;
+  background-color: $color-dark-1;
+  color: $color-white;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    gap: 5rem;
+  }
+
+  &__title {
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+  }
+
+  &__kewrd {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 1.7rem;
+
+      li {
+        font-size: 1.4rem;
+        padding: 0.7rem 0.9rem;
+
+        border: 1px solid #3b3b3b;
+        background-color: #292929;
+        border-radius: 50px;
+      }
+    }
+  }
+
+  &__right {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 4rem;
+  }
+
+  &__item {
+    span {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 16 / 9; // ya 4 / 3, ya 3 / 2, jo bhi shape chahiye
+    overflow: hidden;
+    border-radius: 25px;
+
+    @include respond(md){
+      aspect-ratio: unset;
+      height: 35rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__details {
+    h2 {
+      font-size: clamp(2rem, 3vw + 1rem, 4rem);
+    }
+  }
+
+
+  &__box {
+    border: 1px solid #e9eaeb;
+
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 15px;
+    &-container {
+      margin-top: 5.8rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    //   gap: 3.5rem;
+
+      @include respond(lg) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include respond(md) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+
+  &__inner {
+    padding: 2.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    // gap: 5.8rem;
+  }
+
+  &__tertiary {
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+}

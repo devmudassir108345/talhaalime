@@ -1,0 +1,9 @@
+@keyframes slideup {
+  0% {
+    transform: translateY(-25%);
+  }
+  100% {
+    transform: translateY(-60%);
+    // transition: all 10s;
+  }
+}

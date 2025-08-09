@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#0f0f0f" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webyansh | UX design and Webflow development agency</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <link rel="stylesheet" href="asset/css/main.css" />
+
+    <style></style>
+  </head>
+
+  <body>
+    <!-- <div class="vertical-lines"></div> -->
+
+    <header class="header">
+      <div class="containers">
+        <div class="header__container">
+          <div class="header__logo">
+            <a href="index.html" data-tooltip="Home">
+              <img src="asset/images/logo.png" alt="" />
+            </a>
+          </div>
+          <div class="header__links">
+            <ul>
+              <li><a href="#" data-tooltip="what we do ">services </a></li>
+              <li><a href="#" data-tooltip="for who ">industeries </a></li>
+              <li><a href="#" data-tooltip="our work">portfolio</a></li>
+              <li>
+                <a href="#" data-tooltip="resources & insights">resources </a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__btns">
+            <div class="header__cta">
+              <a
+                href="#"
+                class="btn btn__primary btn-animate-chars btn--sm"
+                aria-label="Book a call"
+                role="button"
+              >
+                <span class="btn-animate-chars__bg"></span>
+                <span class="btn-animate-chars__text">
+                  <span style="transition-delay: 0s">B</span
+                  ><span style="transition-delay: 0.01s">o</span
+                  ><span style="transition-delay: 0.02s">o</span
+                  ><span style="transition-delay: 0.03s">k</span
+                  ><span>&nbsp;</span
+                  ><span style="transition-delay: 0.04s">a</span
+                  ><span>&nbsp;</span
+                  ><span style="transition-delay: 0.05s">c</span
+                  ><span style="transition-delay: 0.06s">a</span
+                  ><span style="transition-delay: 0.07s">l</span
+                  ><span style="transition-delay: 0.08s">l</span>
+                </span>
+              </a>
+            </div>
+            <div class="header__menu-btn">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section--banner">
+      <div class="banner">
+        <div class="container">
+          <div class="banner__container">
+            <div class="heading--secondary mt-45 max-w-[592px]">
+              <h2>Let’s create something out of this world together.</h2>
+            </div>
+            <div class="text__lg banner__text">
+              <h3>Have a nice works? Reach out and let's chat.</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-sm">
+          <div class="contact__form-main">
+            <form action="#">
+              <div class="card">
+               
+                <div class="card-content">
+                  <form id="contactForm">
+                    <div class="form-group">
+                      <label class="label" for="name"
+                        >Name <span class="required">*</span></label
+                      >
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="input"
+                        placeholder="Hello..."
+                        required
+                      />
+                      <div class="error-message">Please enter your name</div>
+                    </div>
+
+                   
+                    <div class="form-group">
+                      <label class="label" for="email"
+                        >Email Address <span class="required">*</span></label
+                      >
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="input"
+                        placeholder="Where can I replay?"
+                        required
+                      />
+                      <div class="error-message">
+                        Please enter a valid email address
+                      </div>
+                    </div>
+                   
+                    <div class="form-group">
+                      <label class="label" for="company">Company Name</label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        class="input"
+                        placeholder="Your company or website?"
+                      />
+                    </div>
+
+                    
+                    <div class="form-group">
+                      <label class="label"
+                        >What's in your mind?
+                        <span class="required">*</span></label
+                      >
+                      <div class="radio-group" id="serviceGroup">
+                        <div class="radio-item">
+                          <input
+                            type="radio"
+                            id="mobile-app"
+                            name="service"
+                            value="Mobile App"
+                            class="radio-input"
+                          />
+                          <label for="mobile-app" class="radio-label"
+                            >Mobile App</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            type="radio"
+                            id="website-design"
+                            name="service"
+                            value="Website Design"
+                            class="radio-input"
+                          />
+                          <label for="website-design" class="radio-label"
+                            >Website Design</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            type="radio"
+                            id="branding"
+                            name="service"
+                            value="Branding"
+                            class="radio-input"
+                          />
+                          <label for="branding" class="radio-label"
+                            >Branding</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            type="radio"
+                            id="web-development"
+                            name="service"
+                            value="Web Development"
+                            class="radio-input"
+                          />
+                          <label for="web-development" class="radio-label"
+                            >Web Development</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            type="radio"
+                            id="illustration"
+                            name="service"
+                            value="Illustration"
+                            class="radio-input"
+                          />
+                          <label for="illustration" class="radio-label"
+                            >Illustration</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            type="radio"
+                            id="logo-design"
+                            name="service"
+                            value="Logo Design"
+                            class="radio-input"
+                          />
+                          <label for="logo-design" class="radio-label"
+                            >Logo Design</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            type="radio"
+                            id="graphic-design"
+                            name="service"
+                            value="Graphic Design"
+                            class="radio-input"
+                          />
+                          <label for="graphic-design" class="radio-label"
+                            >Graphic Design</label
+                          >
+                        </div>
+                      </div>
+                      <div class="error-message">Please select a service</div>
+                    </div>
+
+                    
+                    <div class="form-group">
+                      <label class="label"
+                        >How much your budget range?
+                        <span class="required">*</span></label
+                      >
+                      <div class="radio-group" id="budgetGroup">
+                        <div class="radio-item">
+                          <input
+                            type="radio"
+                            id="budget-1k-5k"
+                            name="budget"
+                            value="$1k - $5k"
+                            class="radio-input"
+                          />
+                          <label for="budget-1k-5k" class="radio-label"
+                            >$1k - $5k</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            type="radio"
+                            id="budget-5k-10k"
+                            name="budget"
+                            value="$5k - $10k"
+                            class="radio-input"
+                          />
+                          <label for="budget-5k-10k" class="radio-label"
+                            >$5k - $10k</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            type="radio"
+                            id="budget-10k-20k"
+                            name="budget"
+                            value="$10k - $20k"
+                            class="radio-input"
+                          />
+                          <label for="budget-10k-20k" class="radio-label"
+                            >$10k - $20k</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            type="radio"
+                            id="budget-20k-50k"
+                            name="budget"
+                            value="$20k - $50k"
+                            class="radio-input"
+                          />
+                          <label for="budget-20k-50k" class="radio-label"
+                            >$20k - $50k</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            type="radio"
+                            id="budget-50k-plus"
+                            name="budget"
+                            value=">$50k"
+                            class="radio-input"
+                          />
+                          <label for="budget-50k-plus" class="radio-label"
+                            >>$50k</label
+                          >
+                        </div>
+                      </div>
+                      <div class="error-message">
+                        Please select a budget range
+                      </div>
+                    </div>
+
+                
+                    <div class="form-group">
+                      <label class="label" for="message">Message</label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        class="textarea"
+                        placeholder="I want to build some..."
+                        rows="4"
+                      ></textarea>
+                    </div>
+
+                    Submit Button
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                      Send Message
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section--footer">
+      <footer class="footer">
+        <div class="container-sm">
+          <div class="footer__container">
+            <div class="footer__col">
+              <div class="footer__logo">
+                <img src="asset/images/logo.png" alt="main logo" />
+              </div>
+              <div class="footer__socials">
+                <a href="#" class="icon" data-tooltip="LinkedIn">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="#" class="icon" data-tooltip="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="icon" data-tooltip="X">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="#" class="icon" data-tooltip="Drible">
+                  <i class="fa-light fa-basketball"></i>
+                </a>
+                <a href="#" class="icon" data-tooltip="Behance">
+                  <i class="fa-brands fa-behance"></i>
+                </a>
+              </div>
+              <div class="footer__text text__sm">
+                <p>India, Rajajinagar, Bangalore, Karnataka, 560021</p>
+                <a href="tel:+923296470633">+92 3296470633</a>
+                <a href="#">divyansh@webyansh.com</a>
+              </div>
+            </div>
+            <div class="footer__col">
+              <div class="footer__heading text__lg">
+                <h2>Services</h2>
+              </div>
+              <div class="footer__list text__sm">
+                <ul>
+                  <li>
+                    <a href="#" data-tooltip="Web Design (UI/UX)"
+                      >Web Design (UI/UX)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" data-tooltip="Webflow Development"
+                      >Webflow Development</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" data-tooltip="Webflow SEO">Webflow SEO</a>
+                  </li>
+                  <li>
+                    <a href="#" data-tooltip="Webflow Migration"
+                      >Webflow Migration</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" data-tooltip="Webflow Integration"
+                      >Webflow Integration</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" data-tooltip="Webflow Support"
+                      >Webflow Support</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" data-tooltip="Growth Marketing"
+                      >Growth Marketing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      data-tooltip="Converstion Rate Optimization (CRO)"
+                      >Converstion Rate Optimization (CRO)</a
+                    >
+                  </li>
+                  <li><a href="#" data-tooltip="Branding">Branding</a></li>
+                  <li>
+                    <a href="#" data-tooltip="Webflow Agency India"
+                      >Webflow Agency India</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__col">
+              <div class="footer__heading text__lg">
+                <h2>Industry</h2>
+              </div>
+              <div class="footer__list text__sm">
+                <ul>
+                  <li><a href="#" data-tooltip="B2B SaaS">B2B SaaS</a></li>
+                  <li>
+                    <a href="#" data-tooltip="Artificial Intelligence"
+                      >Artificial Intelligence</a
+                    >
+                  </li>
+                  <li><a href="#" data-tooltip="Web3">Web3</a></li>
+                  <li>
+                    <a href="#" data-tooltip="Information Technology"
+                      >Information Technology</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" data-tooltip="Financial Services"
+                      >Financial Services</a
+                    >
+                  </li>
+                  <li><a href="#" data-tooltip="Healthcare">Healthcare</a></li>
+                  <li><a href="#" data-tooltip="E-commerce">E-commerce</a></li>
+                  <li>
+                    <a href="#" data-tooltip="Hospitality">Hospitality</a>
+                  </li>
+                  <li><a href="#" data-tooltip="Gaming">Gaming</a></li>
+                  <li><a href="#" data-tooltip="Startups">Startups</a></li>
+                  <li>
+                    <a href="#" data-tooltip="Enterprises">Enterprises</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__col">
+              <div class="footer__heading text__lg">
+                <h2>Company</h2>
+              </div>
+              <div class="footer__list text__sm">
+                <ul>
+                  <li><a href="#" data-tooltip="Portfolio">Portfolio</a></li>
+                  <li><a href="#" data-tooltip="Pricing">Pricing</a></li>
+                  <li><a href="#" data-tooltip="Contact">Contact</a></li>
+                  <li><a href="#" data-tooltip="Resources">Resources</a></li>
+                  <li><a href="#" data-tooltip="Blogs">Blogs</a></li>
+                  <li>
+                    <a href="#" data-tooltip="Integration">Integration</a>
+                  </li>
+                  <li><a href="#" data-tooltip="Migrations">Migrations</a></li>
+                  <li><a href="#" data-tooltip="Careers">Careers</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <div class="overlay overlay__hidden"></div>
+    <!-- <script src="/asset/js/main.js"></script> -->
+
+    <script src="asset/js/jquery.js"></script>
+    <script src="/asset/js/lenis.min.js"></script>
+    <script src="asset/js/browser@4.js"></script>
+    <script src="asset/js/splide.min.js"></script>
+    <script src="asset/js/custom.js"></script>
+    <script src="/asset/js/gsa.js"></script>
+    <script src="/asset/js/ScrollTrigge.js"></script>
+    <script src="/asset/js/split text.js"></script>
+    <script src="asset/js/lib-init.js"></script>
+    <script src="/asset/js/slick.js"></script>
+  </body>
+</html>
