@@ -49,6 +49,15 @@ li {
     // font-size: clamp(4rem, 2.6vw, 4.4rem);
     font-weight: 700;
     letter-spacing: 0.1rem;
+
+    span{
+      color: $color-primary;
+    }
+
+    &-sm{
+      font-size: 3.6rem;
+      font-weight: 700;
+    }
   }
 
   &--tertiary {
@@ -75,6 +84,7 @@ li {
       font-size: 2.23rem;
       font-weight: 700;
     }
+    
   }
 }
 

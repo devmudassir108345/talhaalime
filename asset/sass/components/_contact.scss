@@ -57,7 +57,7 @@
         padding: 2rem;
         display: flex;
         flex-flow: column;
-        gap: 2rem;
+        gap: 3.5rem;
       }
 
       .form-group {
@@ -76,45 +76,61 @@
         color: #ef4444;
       }
 
-      .input {
-        width: 100%;
-        padding-top: 2rem;
-        padding-bottom: 1.8rem;
-        padding-right: 1.8rem ;
-        padding-left: 1.8rem;
-        border-bottom: 1px solid #d1d5db;
-        border-radius: 0.375rem;
-        font-size: 1.4rem;
-        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-        color: $color-light;
+      .form-group-input {
+        position: relative;
+        margin-bottom: 2rem;
 
-        &::placeholder{
-        color: $color-gray;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          height: 2px;
+          width: 0;
+          background-color: $color-primary;
+          transition: all 0.3s ease;
+          transform: translateX(-50%);
+        }
 
+        &:focus-within::after {
+          width: 100%;
         }
       }
 
-      .input:focus {
+      .input,
+      .textarea {
+        width: 100%;
+        padding: 2.5rem;
+        border: none;
         outline: none;
-        border-color: $color-primary;
-    
+        background: transparent;
+        font-size: 1.4rem;
+        color: $color-light;
+        border-bottom: 1px solid $color-gray;
+
+        &::placeholder {
+          color: $color-gray;
+        }
+
+        &:focus {
+          border-bottom: none; // focus par bottom border remove
+        }
       }
 
       .textarea {
         width: 100%;
-        padding: 0.75rem;
-        border: 1px solid #d1d5db;
-        border-radius: 0.375rem;
-        font-size: 0.875rem;
-        min-height: 100px;
-        resize: vertical;
-        font-family: inherit;
-      }
+        resize: none;
+        height: 100px;
+        // border: none;
 
-      .textarea:focus {
-        outline: none;
-        border-color: $color-primary;
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        &:focus {
+          // border: none;
+        }
+      }
+      .error-message {
+        font-size: 1.2rem;
+        color: red;
+        display: none;
       }
 
       .radio-group {
@@ -122,8 +138,9 @@
         // grid-template-columns: repeat(auto-fit, minmax(142px, 1fr));
         display: flex;
         flex-wrap: wrap;
-        gap: 0.75rem;
-        margin-top: 1rem;
+        gap: 1rem;
+        row-gap: 2remhug7  dse3y7 6GR ;
+        margin-top: 3rem;
       }
 
       .radio-item {
@@ -241,20 +258,6 @@
       display: flex;
       flex-direction: column;
       gap: 3rem;
-
-      &__btn {
-        button {
-          font-size: $font-size-1-5;
-          padding: 1.8rem 2.8rem;
-          background-color: $color-primary;
-          color: $color-white;
-          border: none;
-          border-radius: 50px;
-          cursor: pointer;
-          text-transform: capitalize;
-          letter-spacing: 0.5px;
-        }
-      }
     }
 
     .form-row {
@@ -351,4 +354,21 @@
       }
     }
   }
+
+  
 }
+
+
+form {
+    button {
+      font-size: $font-size-1-5;
+      padding: 1.8rem 2.8rem;
+      background-color: $color-primary;
+      color: $color-white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-transform: capitalize;
+      letter-spacing: 0.5px;
+    }
+  }

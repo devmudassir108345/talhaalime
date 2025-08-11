@@ -1,0 +1,19 @@
+.skills{
+    padding: 10rem 0;
+
+    &__container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24rem , 1fr));
+        gap: 5rem;
+    }
+
+    &__item{
+        background-color: $color-white;
+        padding: 6rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;border-radius: 15px;
+    }
+}

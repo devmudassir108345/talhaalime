@@ -40,42 +40,7 @@ function animateTooltip() {
 
 animateTooltip();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 //////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ///////////////////////////////////////
 
@@ -83,7 +48,7 @@ const toggleBtn = document.querySelector(".header__menu-btn");
 const links = document.querySelector(".header__links");
 const linkItems = document.querySelectorAll(".header__links a");
 const overlay = document.querySelector(".overlay");
-const  html = document.querySelector("html")
+const html = document.querySelector("html");
 
 const isMobile = () => window.innerWidth < 992;
 
@@ -96,7 +61,7 @@ function collapseMenu() {
 }
 
 function expandMenu() {
-  html.classList.toggle("overflow-hidden")
+  html.classList.toggle("overflow-hidden");
   links.style.height = `${links.scrollHeight}px`;
   links.classList.add("active");
 
@@ -176,73 +141,114 @@ function initAccordion(scope) {
 
 document.querySelectorAll(".accordion").forEach((acc) => initAccordion(acc));
 
-
 ///////////////////////
 
+function updateVerticalLines() {
+  const container = document.querySelector(".container");
+  const verticalLines = document.querySelector(".vertical-lines");
+  const stopper = 64; // 4rem
 
+  if (container && verticalLines) {
+    const rect = container.getBoundingClientRect();
+    const windowWidth = window.innerWidth;
 
+    const left = Math.max(rect.left, stopper);
+    const right = Math.max(windowWidth - rect.right, stopper);
 
- function updateVerticalLines() {
-        const container = document.querySelector(".container");
-        const verticalLines = document.querySelector(".vertical-lines");
-        const stopper = 64; // 4rem
+    verticalLines.style.setProperty("--left-line", `${left}px`);
+    verticalLines.style.setProperty("--right-line", `${right}px`);
+  }
+}
 
-        if (container && verticalLines) {
-          const rect = container.getBoundingClientRect();
-          const windowWidth = window.innerWidth;
+window.addEventListener("load", updateVerticalLines);
+window.addEventListener("resize", updateVerticalLines);
 
-          const left = Math.max(rect.left, stopper);
-          const right = Math.max(windowWidth - rect.right, stopper);
+const sections = document.querySelectorAll(".data__title");
+const heading = document.getElementById("dynamic-heading");
 
-          verticalLines.style.setProperty("--left-line", `${left}px`);
-          verticalLines.style.setProperty("--right-line", `${right}px`);
-        }
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        heading.textContent = entry.target.getAttribute("data-title");
       }
+    });
+  },
+  {
+    root: null,
+    rootMargin: "-30% 0px -50% 0px", // this slows the switch until more visible
+    threshold: 0.5, // reduced from 0.5
+  }
+);
 
-      window.addEventListener("load", updateVerticalLines);
-      window.addEventListener("resize", updateVerticalLines);
+sections.forEach((section) => {
+  observer.observe(section);
+});
 
+///////////////////////////////////
+//!         TYPING EFFECT
+///////////////////////////////////
 
+const words = [
+  "freelancer",
+  "developer",
+  "project manager",
+  "designer",
+  "content creator",
+];
 
+const effectElement = document.getElementById("effect");
 
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 100;
+let deletingSpeed = 50;
+let delayBetweenWords = 2500;
 
+function typeEffect() {
+  const currentWord = words[wordIndex];
 
-       const sections = document.querySelectorAll(".data__title");
-      const heading = document.getElementById("dynamic-heading");
+  if (!isDeleting) {
+    effectElement.textContent = currentWord.substring(0, charIndex + 1);
+    charIndex++;
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              heading.textContent = entry.target.getAttribute("data-title");
-            }
-          });
-        },
-        {
-          root: null,
-          rootMargin: "-30% 0px -50% 0px", // this slows the switch until more visible
-          threshold: 0.5, // reduced from 0.5
-        }
-      );
+    if (charIndex === currentWord.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, delayBetweenWords);
+      return;
+    }
+  } else {
+    effectElement.textContent = currentWord.substring(0, charIndex - 1);
+    charIndex--;
 
-      sections.forEach((section) => {
-        observer.observe(section);
-      });
+    if (charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+    }
+  }
 
+  setTimeout(typeEffect, isDeleting ? deletingSpeed : typingSpeed);
+}
 
+typeEffect();
 
+///////////////////////////////////
+const tabs = document.querySelectorAll(".tab-btn");
+const panes = document.querySelectorAll(".tab-pane");
 
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.tab;
 
+    // Remove active class from all tab buttons
+    tabs.forEach(t => t.classList.remove("active"));
+    // Add active class to clicked tab button
+    tab.classList.add("active");
 
-
-
-
-
-
-
-      
-
-
-
-
-      
+    // Hide all panes
+    panes.forEach((pane) => pane.classList.remove("active"));
+    // Show target pane
+    document.getElementById(target).classList.add("active");
+  });
+});

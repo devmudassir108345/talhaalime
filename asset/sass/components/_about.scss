@@ -1,0 +1,64 @@
+.about {
+  padding: 14rem 0;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(3rem , 6vw , 9rem);
+
+    @include respond(md){
+        grid-template-columns: 1fr;
+    }
+  }
+
+  .heading--secondary {
+    line-height: 1.2;
+    max-width: 523px;
+    #typing-effect span {
+      border-right: 2px solid $color-primary;
+      padding-right: 5px;
+      animation: blink 0.7s infinite;
+    }
+    #effect {
+      text-transform: capitalize;
+      color: $color-primary;
+    }
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+
+    overflow: hidden;
+    border-radius: 15px;
+    margin-top: 6rem;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  
+  &__info{
+    &-container{
+        display: flex;
+        flex-direction: column;
+        gap: 3.6rem;
+    }
+
+    &-item{
+        text-transform: capitalize;
+        h3{
+            font-size: 1.8rem;
+            color: #767682;
+        }
+        h2{
+            font-size: 2rem;
+            font-weight: 900;
+        }
+    }
+  }
+}
